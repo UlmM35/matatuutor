@@ -1,0 +1,141 @@
+.become-page {
+  min-height: 100vh;
+  background-image: url("../../images/mata.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 1rem;
+  font-family: "Inconsolata", monospace;
+}
+
+.become-card {
+  background: rgba(255, 255, 255, 0.96);
+  width: 55rem;
+  max-width: 95%;
+  padding: 3rem 3.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.become-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.become-intro {
+  font-size: 1.2rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.become-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.become-subtitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.become-list {
+  margin-left: 1.5rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.become-list li {
+  margin-bottom: 0.5rem;
+}
+
+.become-footer-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+.become-btn-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.become-button {
+  background: #0094ff;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.8rem 2.3rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.become-button:hover {
+  background: #007ad1;
+}
+
+@media (max-width: 768px) {
+  .become-page {
+    padding: 2rem 1rem;
+    background-position: top;
+  }
+
+  .become-card {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 15px;
+  }
+
+  .become-title {
+    font-size: 2rem;
+  }
+
+  .become-intro {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .become-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .become-list {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  .become-footer-text {
+    font-size: 1rem;
+  }
+
+  .become-button {
+    font-size: 1rem;
+    padding: 0.7rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .become-title {
+    font-size: 1.7rem;
+  }
+
+  .become-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .become-list {
+    font-size: 0.95rem;
+  }
+
+  .become-button {
+    width: 100%;
+  }
+}

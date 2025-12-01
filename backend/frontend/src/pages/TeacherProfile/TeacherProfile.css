@@ -1,0 +1,157 @@
+.teacherprofile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #102049, #0A142D 100%);
+  padding: 2rem;
+}
+
+.teacherprofile-box {
+  background-color: #f9fafb;
+  border-radius: 20px;
+  width: 42rem;
+  padding: 4rem 3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.teacherprofile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.broneeri {
+  margin-top: 1rem;
+}
+
+.teacherprofile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.teacherprofile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.teacherprofile-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.teacherprofile-title {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.teacherprofile-section {
+  margin-bottom: 2.5rem;
+}
+
+.teacherprofile-subtitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.teacherprofile-boxed-text {
+  background-color: #e6e7e9;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.6;
+}
+
+.teacherprofile-feedback {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.teacherprofile-feedback-card {
+  background-color: #e6e7e9;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  width: 30%;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.feedback-name {
+  font-weight: 600;
+  border-bottom: 1px solid #888;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.teacherprofile-btn-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+
+  .teacherprofile-page {
+    padding: 1rem;
+  }
+
+  .teacherprofile-box {
+    width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .teacherprofile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .teacherprofile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .teacherprofile-info {
+    align-items: center;
+  }
+
+  .teacherprofile-name {
+    font-size: 1.6rem;
+  }
+
+  .teacherprofile-title {
+    font-size: 0.95rem;
+  }
+
+  .teacherprofile-boxed-text {
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .teacherprofile-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .teacherprofile-feedback {
+    flex-direction: column;
+  }
+
+  .teacherprofile-feedback-card {
+    width: 100%;
+  }
+
+  .teacherprofile-btn-row {
+    margin-top: 1.5rem;
+  }
+}

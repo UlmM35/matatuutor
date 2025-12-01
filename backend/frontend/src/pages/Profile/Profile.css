@@ -1,0 +1,103 @@
+.profile-container {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9fafb;
+  color: #111;
+  padding: 80px;
+  min-height: 100vh;
+  letter-spacing: 0.05em;
+  word-spacing: 0.25em;
+}
+
+.profile-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.profile-info p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.logout-button, .logout-button-1 {
+  margin-top: 30px;
+  background-color: #8ed0ff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-weight: 600;
+  color: #002244;
+  cursor: pointer;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.logout-button-1 {
+  margin-right: 1rem;
+}
+
+.logout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 2rem 1rem;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+    letter-spacing: 0.03em;
+    word-spacing: 0.15em;
+  }
+
+  .profile-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .profile-info p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 0.7rem;
+    word-break: break-word;
+  }
+
+  .profile-info strong {
+    font-size: 1.2rem;
+  }
+
+  .profile-info p button {
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+  }
+
+  .logout-button {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    margin-top: 25rem;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-title {
+    font-size: 1.8rem;
+  }
+
+  .profile-info p {
+    font-size: 1.1rem;
+  }
+
+  .logout-button {
+    font-size: 1rem;
+  }
+}
+

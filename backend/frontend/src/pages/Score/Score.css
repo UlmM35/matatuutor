@@ -1,0 +1,130 @@
+.score-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a1639;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+
+.score-box {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 5rem 6rem;
+  max-width: 60rem;
+  width: 100%;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+}
+
+.score-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.score-question-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.score-question {
+  font-size: 2.5rem;
+  color: #0a1639;
+  font-weight: bold;
+  text-align: center;
+}
+
+.score-input {
+  width: 100%;
+  max-width: 30rem;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  background-color: #97d3ff;
+  font-size: 1.8rem;
+  color: #000;
+  outline: none;
+  text-align: center;
+}
+
+.score-input::placeholder {
+  color: #000;
+  opacity: 0.7;
+}
+
+.score-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.score-feedback {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  min-height: 2rem;
+  font-weight: bold;
+}
+
+.score-feedback.correct {
+  color: #28a745;
+}
+
+.score-feedback.incorrect {
+  color: #dc3545;
+}
+
+.score-current {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #0a1639;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+
+  .score-page {
+    padding: 2rem 1rem;
+  }
+
+  .score-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .score-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .score-current {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .score-question {
+    font-size: 1.8rem;
+  }
+
+  .score-input {
+    max-width: 100%;
+    padding: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .score-feedback {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .score-btn-row {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+}

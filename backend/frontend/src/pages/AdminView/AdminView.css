@@ -1,0 +1,124 @@
+.admin-dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 3rem 4rem;
+    background-color: #0a1639;
+    flex: 1;
+}
+
+#box_admin {
+    display: flex;
+    gap: 4rem;
+    background: #003366;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    border: 1px solid #0b1220;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.main-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    flex: 1;
+}
+
+
+.right-panel {
+    flex: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.card_2, .sub-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(249, 250, 251, 0.95);
+    color: black;
+    border-radius: 0.75rem;
+    border: 1px solid #0b1220;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    text-align: center;
+
+}
+
+.number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: -0.7rem;
+}
+
+.number_2 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: -0.5rem;
+}
+
+.card_2 {
+    height: 8rem;
+}
+
+.sub-card {
+    height: 6rem;
+}
+
+.sub-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.sub-cards-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .admin-dashboard {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  #box_admin {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .main-cards {
+    gap: 1.5rem;
+  }
+
+  .card_2 {
+    height: auto;
+    padding: 1rem 0.5rem;
+  }
+
+  .right-panel {
+    gap: 1.5rem;
+  }
+
+  .sub-cards-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .sub-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .sub-card {
+    height: auto;
+    padding: 1rem 0.5rem;
+  }
+}

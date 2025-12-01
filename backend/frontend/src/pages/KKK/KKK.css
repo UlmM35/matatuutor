@@ -1,0 +1,132 @@
+.kkk-container {
+    padding: 3rem 6rem;
+}
+
+.kkk-title {
+    text-align: left;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+.kkk-category {
+    margin-bottom: 0.5rem;
+    border-radius: 0.7rem;
+}
+
+.kkk-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e3e3e3;
+    padding: 0rem 2rem;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+}
+
+.kkk-category-header:hover {
+    background: #dcdcdc;
+}
+
+.kkk-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+}
+
+.kkk-item {
+    background: #f5f5f5;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+}
+
+.kkk-item:hover {
+    background: #e3e3e3;
+}
+
+.kkk-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 650;
+    font-size: 1.3rem;
+}
+
+.kkk-question:hover {
+    color: #0077ff;
+}
+
+.arrow {
+    transition: transform 0.5s ease;
+}
+
+.arrow.open {
+    transform: rotate(180deg);
+}
+
+.kkk-answer {
+    margin-top: 10px;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 450;
+    line-height: 1.4;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .kkk-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .kkk-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .kkk-category-header {
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .kkk-question {
+    font-size: 1.1rem;
+  }
+
+  .kkk-item {
+    padding: 0.8rem 1rem;
+  }
+
+  .kkk-answer {
+    margin-left: 0.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .kkk-title {
+    font-size: 1.8rem;
+  }
+
+  .kkk-category-header {
+    padding: 0.9rem 1rem;
+  }
+
+  .kkk-question {
+    font-size: 1rem;
+  }
+
+  .kkk-answer {
+    font-size: 0.9rem;
+  }
+}

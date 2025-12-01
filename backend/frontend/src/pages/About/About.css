@@ -1,0 +1,125 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.about {
+    transform: scale(0.8);
+    transform-origin: top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #F9FAFB;
+    padding: 1.25rem 7.5rem;
+    align-items: center;
+    border-radius: 2rem;
+    align-self: center;
+}
+
+.about-header, .about-second-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    font-size: 5.25rem;
+    font-style: normal;
+    font-weight: 800;
+    margin-top: 4.25rem;
+    gap: 6rem;
+}
+
+.about-header {
+    background: radial-gradient(circle,rgba(22, 92, 204, 1) 27%, rgba(22, 31, 204, 1) 51%, rgba(16, 32, 73, 1) 83%);
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradientAnimation 3s linear infinite;
+}
+
+.about-second-header {
+    padding-top: 4rem;
+    font-size: 3.25rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    line-height: 4.375rem;
+}
+
+.about-paragraph  {
+    color: #000;
+    text-align: flex-start;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+    max-width: 85rem;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+
+.platform-title {
+    display: block;
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+.about-platform ul {
+    padding-top: 1rem;
+    list-style: none;
+    padding-left: 3;
+}
+
+.about-platform li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-platform li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #102049;
+}
+
+#colored {
+    color: blue;
+}
+
+@media (max-width: 768px) {
+  .about {
+      padding: 1.5rem 2rem;
+      border-radius: 1rem;
+  }
+
+  .about-header {
+      font-size: 2.8rem;
+      margin-top: 1.5rem;
+  }
+
+  .about-second-header {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+      margin-bottom: 2rem;
+      margin-top: -1rem;
+  }
+
+  .about-paragraph {
+    font-size: 1.2rem;
+    padding-bottom: 0rem;
+  }
+
+  .platform-title {
+    font-size: 1.6rem;
+  }
+
+  .about-platform {
+    width: 100%;
+  }
+
+  .about-platform li {
+    padding-left: 1.2rem;
+    font-size: 1.1rem;
+  }
+}
+

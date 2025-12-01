@@ -1,0 +1,146 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.leia, .pakume, .populaarsed, .kuidas-toimib {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #D1F7FF;
+    height: 31.25rem;
+    padding: 1.25rem 7.5rem;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.leia-text, .pakume-text, .populaarsed-text, .toimib-text {
+    color: #000;
+    font-size: 3.25rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 4.375rem;
+}
+
+.broneeri-text, .pakume-mida, .ikoon-text {
+    color: #000;
+    text-align: left;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.pakume {
+    display: flex;
+    background-color: #F9FAFB;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;    
+}
+
+.populaarsed {
+    background-color: #F9FAFB;
+    align-items: center;
+    justify-content: flex-start;
+    height: 38rem;
+}
+
+.card-container {
+    display: flex;
+    gap: 4.0625rem;
+}
+
+.kuidas-toimib {
+    background-color: #F9FAFB;
+    align-items: center;
+    justify-content: flex-start;
+    height: 34.375rem;
+}
+
+.toimib-text {
+    font-size: 4.375rem;
+    line-height: normal;
+}
+
+.ikoonid {
+    display: flex;
+    align-items: cen;
+    gap: 5rem;
+}
+
+.ikoon-1, .ikoon-2, .ikoon-3 {
+    display: flex;
+    flex-direction: column;
+    padding: 0.625rem;
+    align-items: center;
+    gap: 5rem;
+}
+
+.ikoon-3 {
+    gap: 5.3rem;
+}
+
+.ikoon-text {
+    font-weight: 800;
+}
+
+.ikoon-text, .toimib-text, .populaarsed-text {
+    background: radial-gradient(circle,rgba(22, 92, 204, 1) 27%, rgba(22, 31, 204, 1) 51%, rgba(16, 32, 73, 1) 83%);
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradientAnimation 2s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 200% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 768px) {
+
+  .leia, .pakume, .populaarsed, .kuidas-toimib {
+    padding: 1.25rem 1.5rem;
+    height: auto;
+    gap: 1.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .leia-text,
+  .pakume-text,
+  .populaarsed-text,
+  .toimib-text {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  .broneeri-text,
+  .pakume-mida,
+  .ikoon-text {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  .card-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .ikoonid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .ikoon-1, .ikoon-2, .ikoon-3 {
+    gap: 1.2rem;
+  }
+}

@@ -1,0 +1,98 @@
+.passconfirm-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #102049, #0A142D 100%);
+    color: #0b1220;
+    padding: 2rem;
+    flex-direction: column;
+    gap: 0.625rem;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.passconfirm-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 0;
+    font-size: 1rem;
+    background-color: #F9FAFB;
+    width: 27rem;    
+    margin-top: -3rem;  
+    min-height: 50vh;       
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 4rem 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.passconfirm-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: black;
+  line-height: normal;
+  margin-bottom: 2.5rem;
+}
+
+.passconfirm-text,
+.passconfirm-question {
+    font-size: 1.25rem;
+    font-weight: 450;
+    color: black;
+    margin-top: 2rem;
+    text-align: left;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.passconfirm-btn-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+
+  .passconfirm-page {
+    padding: 2rem 1rem;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .passconfirm-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem 1.5rem;
+    margin-top: 0;
+    border-radius: 16px;
+    min-height: auto;
+    align-items: center;
+  }
+
+  .passconfirm-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .passconfirm-text {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 1.2rem 0;
+  }
+
+  .passconfirm-question {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .passconfirm-btn-row {
+    margin: 1.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

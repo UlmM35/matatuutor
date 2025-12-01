@@ -1,0 +1,122 @@
+.booking-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a1639;
+  min-height: 100vh;
+}
+
+.booking-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 5rem 5rem 5rem 5rem;
+  width: 40rem;
+  height: 40rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.booking-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: 0rem;
+  color: #000;
+}
+
+.booking-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.radio-row {
+  display: flex;
+  gap: 3rem;
+}
+
+.booking-show, .choice {
+  font-size: 1.5rem;
+}
+
+.choice {
+  margin-top: 1rem;
+}
+
+.booking-btn-row {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .booking-page {
+    padding: 1.5rem 1rem;
+    align-items: flex-start;
+  }
+
+  .booking-box {
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem 1.5rem;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .booking-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .booking-form {
+    gap: 1rem;
+  }
+
+  .booking-show {
+    font-size: 1.2rem;
+  }
+
+  .choice {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .radio-row {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .radio-row label {
+    font-size: 1.1rem;
+  }
+
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="radio"] {
+    font-size: 1rem;
+  }
+
+  .booking-btn-row {
+    margin-top: 1.5rem;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-title {
+    font-size: 1.6rem;
+  }
+
+  .booking-show,
+  .choice {
+    font-size: 1.1rem;
+  }
+
+  .radio-row label {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,151 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #102049, #0A142D 100%);
+    color: #0b1220;
+    padding: 2rem;
+    flex-direction: column;
+    gap: 0.625rem;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 0;
+    font-size: 1rem;
+    background-color: #F9FAFB;
+    width: 33rem;
+    margin-top: -1rem;
+    min-height: 55vh;
+    border-radius: 20px;
+    padding-bottom: 7rem;
+}
+
+#box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 4rem;
+    width: 25rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: black;
+    line-height: normal;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.username-lable, .password-lable {
+    font-size: 1.5rem;
+    font-weight: 450;
+    color: black;
+    margin-top: 2rem;
+}
+
+.username-input, .password-input {
+    font-size: 1.5rem;
+    background-color: #90D5FF;
+    border: none;
+    border-radius: 4px;
+    padding: 7px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 25rem;
+}
+
+
+.username-input::placeholder, .password-input::placeholder {
+    font-size: 1.25rem;
+    color: black;
+}
+
+.link-unustasid {
+    margin-left: auto;
+}
+
+.link-login {
+    align-self: center;
+}
+
+.link-registreeri {
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+
+  .login-container {
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+
+.login {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  margin-top: 0;
+  align-self: center;
+}
+
+  #box1 {
+    width: 100%;
+    margin-top: 1rem;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  .username-lable,
+  .password-lable {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: left;
+    margin-top: 1.5rem;
+  }
+
+  .username-input,
+  .password-input {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+  }
+
+  .username-input::placeholder,
+  .password-input::placeholder {
+    font-size: 1rem;
+  }
+
+  .link-unustasid {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+
+  .link-registreeri {
+    margin-top: 1rem;
+    align-self: center;
+  }
+}
