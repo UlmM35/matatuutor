@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express')
 const mongoose = require('mongoose')
 const config = require('./utils/config')
@@ -21,7 +22,7 @@ mongoose
         logger.error('error connection to MongoDB:', error.message)
     })
     
-app.use(express.static('dist'))
+app.use(express.static(path.join(__dirname, 'dist')))
 app.use(express.json())
 app.use(middleware.requestLogger)
 app.use(middleware.tokenExtractor)
@@ -32,7 +33,7 @@ app.use('/api/teachers', middleware.userExtractor, teachersRouter)
 app.use('/api/bookings', middleware.userExtractor, bookingsRouter)
 
 app.get('*', (req, res) => {
-    res.sendFile('./dist')
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 })
 
 app.use(middleware.unknownEndpoint)
