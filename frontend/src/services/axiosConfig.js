@@ -6,7 +6,7 @@ export const setupAxiosInterceptors = () => {
   axios.interceptors.response.use(
     (response) => response,
     (error) => {
-      if (error.response?.status === 401 || error.response?.status === 500) {
+      if (error.response?.status === 401) {
         alert("Token expired, logging out.")
         store.dispatch(logOut())
         window.location.href = '/login'

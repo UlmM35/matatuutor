@@ -36,7 +36,7 @@ const Login = () => {
                         <div className="title">MataTuutor</div>
                         <div className="subtitle">Sisselogimine</div>
 
-                        <div className="username-lable">Nimi</div>
+                        <div className="username-lable">Nimi/Meil</div>
                         <input type="text" value={usernameOrEmail} onChange={({ target }) => setUsernameOrEmail(target.value)}
                             id="username" className="username-input" placeholder="Sisestage oma nimi" />
 
