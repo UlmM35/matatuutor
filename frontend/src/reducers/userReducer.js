@@ -77,10 +77,19 @@ export const updateUser = (score) => {
 
 export const logOut = () => {
   return async (dispatch) => {
-    window.localStorage.clear();
-    dispatch(removeUser());
+    window.localStorage.clear()
+    dispatch(removeUser())
     dispatch(clearBookings())
-  };
-};
+  }
+}
+
+export const deleteUser = () => {
+  return async (dispatch) => {
+    await userService.remove()
+    window.localStorage.clear()
+    dispatch(removeUser())
+    dispatch(clearBookings())
+  }
+}
 
 export default userSlice.reducer

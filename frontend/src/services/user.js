@@ -26,4 +26,13 @@ const update = async (score) => {
     return response.data
 }
 
-export default { setToken, getUsers, create, update }
+const remove = async () => {
+    const config = {
+        headers: { Authorization: token }
+    }
+
+    const response = await axios.delete(baseUrl, config)
+    return response.data
+}
+
+export default { setToken, getUsers, create, update, remove }

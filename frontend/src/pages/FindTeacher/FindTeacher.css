@@ -67,6 +67,44 @@
     animation: gradientAnimation 3s linear infinite;
 }
 
+.add-teacher-card {
+  width: 260px;
+  height: 387px;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.add-teacher-card:hover {
+  transform: translateY(-5px);
+}
+
+.add-plus {
+  font-size: 5rem;
+  color: #6b6b6b;
+  margin-bottom: 1rem;
+}
+
+.add-profile-btn {
+  background-color: #aec0cb;
+  color: black;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.add-profile-btn:hover {
+  background-color: #cdd8de;
+}
+
 @keyframes gradientAnimation {
     0% {
         background-position: 200% 50%;
@@ -102,11 +140,12 @@
   }
 
   .card-container{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     justify-content: center;
     gap: 1.5rem;
     margin-top: 3rem;
     margin-bottom: 5rem;
   }
 }
+

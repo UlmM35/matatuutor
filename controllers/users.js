@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt')
 const userRouter = require('express').Router()
 const { userExtractor, tokenExtractor } = require('../utils/middleware')
 const User = require('../models/user')
+const Booking = require('../models/booking')
 
 userRouter.post('/', async (request, response) => {
   const { username, email, password, score } = request.body
@@ -58,6 +59,23 @@ userRouter.patch('/', userExtractor, tokenExtractor, async (request, response) =
 
   response.status(200).json(userResponse)
 })
+
+userRouter.delete('/', userExtractor, async (request, response) => {
+  if (!request.user) {
+    return response.status(401).json({ error: 'auth error' })
+  }
+
+  const user = await User.findById(request.user)
+
+  if (!user) {
+    return response.status(404).json({ error: 'user doesnt exist'})
+  }
+
+  await User.findByIdAndDelete(request.user)
+  await Booking.deleteMany({ user: request.user})
+  response.status(204).end()
+})
+
 
 userRouter.get('/', async (request, response) => {
   const users = await User.find({}).populate('bookings', { date: 1, length: 1})

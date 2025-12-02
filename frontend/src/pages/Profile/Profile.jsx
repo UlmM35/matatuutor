@@ -2,11 +2,24 @@ import "./Profile.css";
 import Button from "../../components/Button/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { logOut } from "../../reducers/userReducer";
+import { logOut, deleteUser } from "../../reducers/userReducer";
 import { useNavigate } from "react-router-dom";
 import { initializeBookings, deleteBooking} from "../../reducers/bookingReducer";
 
 const Profile = () => {
+
+  const [confirmDeleteOpen, setConfirmDeleteOpen] = useState(false);
+  const [deleteSuccessOpen, setDeleteSuccessOpen] = useState(false);
+
+  const handleDeleteUser = () => {
+    setConfirmDeleteOpen(true);
+  };
+
+  const confirmDeleteUser = () => {
+    setConfirmDeleteOpen(false);
+    setDeleteSuccessOpen(true);
+  };
+
   const [loading, setLoading] = useState(false)
   const dispatch = useDispatch()
 
@@ -53,9 +66,45 @@ const Profile = () => {
         ))}
       </div>
       </div>
+      <button className="delete-user-btn" onClick={handleDeleteUser}>
+        Kustuta kasutaja
+      </button>
+
       <button className="logout-button" onClick={handleLogout}>
           Logi välja
       </button>
+      
+      {confirmDeleteOpen && (
+        <div className="popup-overlay">
+          <div className="popup-box">
+            <p>Oled kindel, et soovid kasutaja kustutada?</p>
+            <div className="popup-row">
+              <button className="ok-btn" onClick={confirmDeleteUser}>OK</button>
+              <button className="cancel-btn" onClick={() => setConfirmDeleteOpen(false)}>Tühista</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+    {deleteSuccessOpen && (
+      <div className="popup-overlay">
+        <div className="popup-box">
+          <p>Sinu kasutaja on kustutatud</p>
+          <div className="popup-row">
+            <button
+              className="ok-btn"
+              onClick={() => {
+                dispatch(deleteUser());
+                navigate("/login");
+              }}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+)}
+
     </div>
   );
 };
