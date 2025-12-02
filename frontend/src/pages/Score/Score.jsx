@@ -14,8 +14,8 @@ const Score = () => {
   const dispatch = useDispatch()
 
   const whichType = (num) => {
-    const num1 = Math.floor(Math.random() * 100) + 1
-    const num2 = Math.floor(Math.random() * 100) + 1
+    let num1 = Math.floor(Math.random() * 100) + 1
+    let num2 = Math.floor(Math.random() * 100) + 1
     if (num === 1) {
       setQuestion({ num1, num2, answer: num1 + num2, type: "+", score: 100})
     } else if (num === 2) {
@@ -23,6 +23,7 @@ const Score = () => {
     } else if (num === 3) {
       setQuestion({ num1, num2, answer: num1 * num2, type: "*", score: 200})
     } else if (num === 4) {
+      num2 = Math.floor(Math.random() * 10) + 1
       setQuestion({ num1, num2, answer: Number((num1 / num2).toFixed(1)), type: "/", score: 200})
     } else {
       setQuestion({ num1, num2, answer: num1 % num2, type: "mod", score: 300})
