@@ -32,7 +32,7 @@ app.use('/api/teachers', middleware.userExtractor, teachersRouter)
 app.use('/api/bookings', middleware.userExtractor, bookingsRouter)
 
 app.get('*', (req, res) => {
-    res.sendFile('dist')
+    res.sendFile('./dist')
 })
 
 app.use(middleware.unknownEndpoint)
