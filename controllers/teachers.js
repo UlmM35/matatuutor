@@ -1,5 +1,6 @@
 const teachersRouter = require('express').Router()
 const Teacher = require('../models/teacher')
+const Booking = require('../models/booking')
 const { userExtractor } = require('../utils/middleware')
 
 teachersRouter.get('/', async (request, response) => {
@@ -20,7 +21,9 @@ teachersRouter.delete('/:id', userExtractor, async (request, response) => {
     return response.status(403).json({ error: 'admin access required' })
   }
 
+
   await Teacher.findByIdAndDelete(request.params.id)
+  await Booking.deleteMany({ teacher: request.params.id })
   response.status(204).end()
 })
 
