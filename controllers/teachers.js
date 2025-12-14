@@ -21,7 +21,6 @@ teachersRouter.delete('/:id', userExtractor, async (request, response) => {
     return response.status(403).json({ error: 'admin access required' })
   }
 
-
   await Teacher.findByIdAndDelete(request.params.id)
   await Booking.deleteMany({ teacher: request.params.id })
   response.status(204).end()
